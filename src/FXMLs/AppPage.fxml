@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Frontend.AppPage">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../background_1.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffcb" height="500.0" layoutX="20.0" layoutY="35.0" stroke="WHITE" strokeType="INSIDE" width="760.0" />
+      <GridPane layoutX="25.0" layoutY="40.0" prefHeight="522.0" prefWidth="751.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="589.0" minWidth="10.0" prefWidth="469.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="331.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="400.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="295.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                   <Button fx:id="prevPage" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#previousPage" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: darkgreen;" text="&lt;- Previous page" textFill="#004600" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                       <GridPane.margin>
+                           <Insets right="20.0" />
+                       </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                   <Button fx:id="nextPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#nextPage" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: transparent; -fx-border-color: darkgreen;" text="Next page -&gt;" textFill="#004600" GridPane.columnIndex="1" GridPane.valignment="CENTER">
+                       <GridPane.margin>
+                           <Insets left="20.0" />
+                       </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                   </Button>
+               </children>
+               <GridPane.margin>
+                  <Insets right="40.0" top="10.0" />
+               </GridPane.margin>
+            </GridPane>
+            <ImageView fx:id="image" fitHeight="345.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <GridPane prefHeight="280.0" prefWidth="250.0" GridPane.columnIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="83.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="10.0" prefWidth="248.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <GridPane.margin>
+                  <Insets bottom="100.0" top="100.0" />
+               </GridPane.margin>
+               <children>
+                  <Label text="Votes:" textFill="#004600" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label text="Name:" textFill="#004600" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="votes" text="Label" textFill="#004600" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="name" text="Label" textFill="#004600" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="prevKitten" mnemonicParsing="false" onAction="#previousKitten" style="-fx-background-color: transparent; -fx-border-color: darkgreen;" text="&lt;- Old kitten" textFill="#004600" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="nextKitten" mnemonicParsing="false" onAction="#nextKitten" style="-fx-background-color: transparent; -fx-border-color: darkgreen;" text="New kitten -&gt;" textFill="#004600" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="50.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <GridPane.margin>
+                  <Insets top="35.0" />
+               </GridPane.margin>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+package Frontend;
+
+import javafx.application.Application;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+    private String imgPath = "file:background_1.jpg";
+    private BackgroundSize nowyRozmiar;
+    private BackgroundImage myBI;
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
+        Parent root = FXMLLoader.load(getClass().getResource("../FXMLs/LogPage.fxml"));
+        primaryStage.setTitle("Kittens");
+        primaryStage.setScene(new Scene(root, 800, 600));
+        primaryStage.show();
+
+   }
+
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+}
